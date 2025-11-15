@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2035341694624054328}
   - component: {fileID: 4030558663252187409}
   - component: {fileID: 3617449612857889603}
-  m_Layer: 0
+  - component: {fileID: 7711985891047927792}
+  m_Layer: 10
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,3 +156,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7711985891047927792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8255628552401744505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde23790c201ac54bb0744533c81b95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  speed: 20
+  damage: 10
+  lifetime: 3

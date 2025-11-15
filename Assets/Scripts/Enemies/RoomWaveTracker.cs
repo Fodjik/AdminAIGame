@@ -10,6 +10,9 @@ public class RoomWaveTracker : MonoBehaviour
 
     private RunManager runManager;
 
+    public DoorController[] doors;
+
+
     private void Awake()
     {
         runManager = FindFirstObjectByType<RunManager>();
@@ -29,12 +32,16 @@ public class RoomWaveTracker : MonoBehaviour
 
         waveStarted = true;
 
+        foreach (var d in doors)
+            d.CloseDoor();
+
         foreach (var spawner in spawners)
         {
             spawner.gameObject.SetActive(true);
             spawner.StartWave();
         }
     }
+
 
     public void RegisterEnemy(GameObject enemy)
     {
@@ -56,5 +63,9 @@ public class RoomWaveTracker : MonoBehaviour
     {
         waveStarted = false;
         runManager.RoomCleared();   
+
+        foreach (var d in doors)
+        d.OpenDoor();
+
     }
 }

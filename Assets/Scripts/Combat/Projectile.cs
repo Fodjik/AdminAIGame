@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log("Projectile hit: " + col.name);
-        if (col.CompareTag("Projectile")) return;
+        
 
         var enemy = col.GetComponent<Enemy>();
         if (enemy != null)

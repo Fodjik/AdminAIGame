@@ -7,11 +7,13 @@ public class EnemySpawner : MonoBehaviour
     public int enemiesPerWave = 5;
     public float spawnInterval = 0.4f;
 
-    private RoomWaveTracker roomTracker;
+    private RoomWaveTracker room;
 
     private void Awake()
     {
-        roomTracker = GetComponentInParent<RoomWaveTracker>();
+        room = GetComponentInParent<RoomWaveTracker>();
+        
+        gameObject.SetActive(false);
     }
 
     public void StartWave()
@@ -31,6 +33,7 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-        roomTracker.RegisterEnemy(enemy);
+
+        room.RegisterEnemy(enemy);
     }
 }
