@@ -1,0 +1,30 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# Project-specific
+*.csproj
+*.sln
+*.user
+*.pidb
+*.suo
+*.tmp
+*.svd
+*.pdb
+*.mdb
+
+# Unity Cloud
+sysinfo.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Rider / JetBrains
+.idea/
